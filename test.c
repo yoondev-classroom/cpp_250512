@@ -16,3 +16,8 @@ int main(void)
 #include <stdio.h>
 
 void foo(void) { printf("foo\n"); }
+
+int main(void)
+{
+    const int c;
+}
