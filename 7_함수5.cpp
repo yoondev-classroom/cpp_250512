@@ -15,7 +15,6 @@ using namespace std;
 // 4) C99 표준에 인라인 함수 문법이 도입되었습니다.
 //    C++: inline void foo() {}
 //    C  : static inline void foo() {}
-
 inline int square(int x)
 {
     return x * x;
