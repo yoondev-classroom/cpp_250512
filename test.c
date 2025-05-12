@@ -12,6 +12,7 @@ int main(void)
 }
 #endif
 
+#if 0
 // test.c
 #include <stdio.h>
 
@@ -21,3 +22,17 @@ int main(void)
 {
     const int c;
 }
+#endif
+
+void foo(int a, int b) {}
+void goo(void) {}
+
+int main()
+{
+}
+
+/*
+0000000000000000 T _foo
+0000000000000004 T _goo
+0000000000000008 T _main
+*/
