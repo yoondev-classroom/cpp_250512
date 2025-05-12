@@ -1,5 +1,5 @@
 // 1_시작.cpp
-#include <stdio.h>
+
 // Build: Ctrl + F7
 // Build + Run: Ctrl + F5
 // - 모든 소스를 컴파일하고, 링크해서, 실행 파일을
@@ -32,8 +32,42 @@
 // 2020년: C++20
 // 2023년: C++23
 
+// https://github.com/yoondev-classroom/cpp_250512
+
+// 5. C++에서 C의 모든 기능을 사용할 수 있습니다.
+// 6. C의 표준하고, C++ 안에서의 C의 표준은 다릅니다.
+
+// /* /* */ */
+// -> 중첩이 되지 않습니다.
+
+#if 0
+#include <stdio.h>
+
+// int main(void)
 int main(void)
 {
     printf("Hello, C\n");
     return 0;
+}
+#endif
+#if 0
+void foo(void) {} // OK
+void goo() {}     // OK
+
+int main()
+{
+    // foo(10);
+    // goo(10);
+
+    // return 0;
+    // C++ 컴파일러는 메인 함수에서, return 0를
+    // 자동으로 처리하므로, 생략 가능합니다.
+}
+#endif
+
+#include <stdio.h>
+
+int main()
+{
+    printf("Hello, C\n");
 }
