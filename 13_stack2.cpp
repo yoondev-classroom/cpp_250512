@@ -2,25 +2,38 @@
 #include <iostream>
 using namespace std;
 
+// 데이터 캡슐화
+
 // 해결방법: 스택의 상태를 사용자 정의 타입(구조체)으로 설계합니다.
-#if 0
+#if 1
 struct Stack
 {
     int buff[10];
     int top;
 };
 
+void Init(Stack *s)
+{
+    s->top = 0;
+}
+
 void Push(Stack *s, int n)
 {
+    // buff[top++] = n;
+    s->buff[(s->top)++] = n;
 }
 
 int Pop(Stack *s)
 {
+    // return buff[--top];
+    return s->buff[--(s->top)];
 }
 
 int main()
 {
     Stack s1;
+    Init(&s1);
+
     Push(&s1, 10);
     Push(&s1, 20);
     Push(&s1, 30);
@@ -30,6 +43,7 @@ int main()
     cout << Pop(&s1) << endl;
 
     Stack s2;
+    Init(&s2);
 }
 #endif
 
@@ -59,6 +73,7 @@ int main()
 }
 #endif
 
+#if 0
 void Print(const Point *pt)
 {
     // (*pt).x = 1000; // 오류!
@@ -78,3 +93,4 @@ int main()
 
     Print(&pt1);
 }
+#endif
