@@ -5,6 +5,7 @@ using namespace std;
 // C/C++ 에는 기존 타입의 별칭을 제공할 수 있는
 // 문법이 있습니다.
 // - typedef
+// - 변수를 정의하듯, 타입의 별칭을 만들 수 있습니다.
 #if 0
 int main()
 {
@@ -24,6 +25,9 @@ int main()
 //     * using 선언
 //     * using 지시어
 //     * using을 통한 타입 별칭
+
+//  - 템플릿 기반의 타입에 대한 별칭도 만들 수 있습니다.
+
 int main()
 {
     // typedef int INT;
