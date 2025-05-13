@@ -26,8 +26,14 @@ int main()
 #if 0
 int main()
 {
-    // int n = 10000;
-    // long n = 10000;
+    // int n = 10000;   - %d  : int
+    // long n = 10000;  - %ld : long
+    // long long        - %lld : long long
+
+    // unsigned int - %u
+    // unsigned long - %lu
+    // unsigned long long - %llu
+
     int n = 10000;
     char ch = 'A';
 
@@ -41,7 +47,7 @@ int main()
 }
 #endif
 
-#if 0
+#if 1
 // C++23에서 새로운 출력의 라이브러리가 도입되었습니다.
 #include <print>
 

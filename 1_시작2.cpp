@@ -39,8 +39,8 @@ int main()
 
 #include <iostream>
 
-// 표준 출력: std::cout
-// 표준 입력: std::cin
+// 표준 출력: cout
+// 표준 입력: cin
 
 int main()
 {
