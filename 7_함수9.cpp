@@ -90,7 +90,10 @@ auto add(int a, int b) -> int
 
 int x[3];
 
-auto foo() -> int (*)[3]
+// auto foo() -> int (*)[3]
+
+// 반환 타입을 자동으로 추론합니다.
+auto foo()
 {
     return &x; // int (*)[3]
 }
