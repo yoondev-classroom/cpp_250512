@@ -34,6 +34,18 @@ long long square(long long x) { return x * x; }
 0000000000000038 T __Z6squarex
 */
 
+// __Z3fooidc
+void foo(int a, double b, char c) {}
+// __Z3fooc
+void foo(char c) {}
+
+// __Z3foov
+extern "C"
+{
+    // _foo
+    void foo() {}
+}
+
 int main()
 {
     cout << square(10) << endl;
