@@ -31,6 +31,9 @@ int main()
 
     // 명시적인 타입 지정
     foo<long, float>(42, 3.14);
+    //  -----------  -----------
+    //      |             -> 값 전달(Value parameter)
+    //  타입 전달(Type parameter)
 }
 
 // C++의 표준 라이브러리 - STL(Standard Template Library)

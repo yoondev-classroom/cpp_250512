@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-#if 0
+#if 1
 int square(int x)
 {
     return x * x;
