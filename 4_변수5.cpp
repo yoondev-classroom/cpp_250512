@@ -13,3 +13,12 @@ int main()
     decltype(x) x2;
     // int      x2;
 }
+
+// template <typename T1, typename T2>
+// decltype(a + b) add(T1 a, T2 b) { return a + b; }
+
+template <typename T1, typename T2>
+auto add(T1 a, T2 b) -> decltype(a + b)
+{
+    return a + b;
+}

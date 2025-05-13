@@ -10,7 +10,7 @@ using namespace std;
 
 int main()
 {
-    double x[3] = {10, 20, 30};
+    int x[3] = {10, 20, 30};
     // x의 타입은 무엇일까요?
     // - 이름을 뺀 나머지가 타입입니다.
     //  : int[3]

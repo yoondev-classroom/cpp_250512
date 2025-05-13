@@ -42,7 +42,7 @@ int main()
     int x1[3] = {10, 20, 30};
     Point pt1 = {10, 20};
 
-    // 직접 초기화(Direct Initialization)
+    // 직접 초기화(Direct Initialization) - *
     int n2{42};
     int x2[3]{10, 20, 30};
     Point pt2{10, 20};

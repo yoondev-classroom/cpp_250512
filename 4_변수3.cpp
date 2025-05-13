@@ -14,7 +14,7 @@ int main()
 }
 #endif
 
-#if 0
+#if 1
 int main()
 {
     double d1{3.14};
