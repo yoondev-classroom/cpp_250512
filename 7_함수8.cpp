@@ -6,6 +6,7 @@ int square(int x) { return x * x; }
 // 실수 타입에 대해서는 위의 함수를 금지하고 싶습니다.
 
 // 방법 1. 선언만 합니다.
+// double square(double x);
 // => 링크 오류를 의도합니다.
 /*
     Undefined symbols for architecture arm64:
