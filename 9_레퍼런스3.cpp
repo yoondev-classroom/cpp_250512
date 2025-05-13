@@ -30,9 +30,29 @@ int main()
 }
 #endif
 
-void Increment(int x)
+#if 1
+// Call by Address / Pointer
+void Increment(int *px)
 {
-    ++x;
+    if (px)
+    {
+        ++(*px);
+    }
+}
+
+int main()
+{
+    int x = 10;
+
+    Increment(&x);
+    cout << x << endl;
+}
+#endif
+
+// Call by Reference
+void Increment(int &rx)
+{
+    ++rx;
 }
 
 int main()
