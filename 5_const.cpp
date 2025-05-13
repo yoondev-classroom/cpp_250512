@@ -35,7 +35,7 @@ int main()
 
 // C++11에서 constexpr 키워드가 추가되었습니다.
 // 상수 표현식에 사용할 수 있는 키워드입니다.
-#if 0
+#if 1
 int main()
 {
     // constexpr const int c1 = 10; // 컴파일 타임 상수
@@ -48,8 +48,3 @@ int main()
     printf("%d\n", c2);
 }
 #endif
-
-int main()
-{
-    int x = 10;
-}
