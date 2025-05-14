@@ -30,7 +30,8 @@ int main()
     foo(0);
     foo(nullptr);
 
-    int *p1 = nullptr;
+    // int *p1 = nullptr;
+    int *p1{nullptr};
     if (p1)
     {
         cout << "유효합니다." << endl;
