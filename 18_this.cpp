@@ -46,6 +46,7 @@ public:
     }
 
     // C++23에서는 멤버 함수를 만들때, 명시적으로 객체를 전달받을 수 있습니다.
+    // - explicit object parameter
     void Set2(this Point &self, int x, int y)
     {
         self.x = x;
