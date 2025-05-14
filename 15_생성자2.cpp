@@ -26,9 +26,30 @@ int main()
 }
 #endif
 
+#if 0
 int main()
 {
     Object *p = new Object[3];
 
     delete[] p;
+}
+#endif
+
+class Point
+{
+public:
+    Point() { cout << "Point()" << endl; }
+    Point(int x, int y) { cout << "Point(int, int)" << endl; }
+};
+
+int main()
+{
+    Point *p1 = new Point; // Point()
+    Point *p2 = new Point{10, 20};
+
+    Point *p3 = new Point[3]{
+        {10, 20},
+        {},
+        {10, 20},
+    };
 }
