@@ -91,12 +91,12 @@ class Point
 
 public:
     Point(int x, int y)
-        : x_{x}, y_{y} // OK
+        : x_{x}, y_{y}
     {
-        x_ = 10;
     }
 };
 
 int main()
 {
+    Point pt{100, 200};
 }
