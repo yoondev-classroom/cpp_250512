@@ -2,6 +2,7 @@
 #include <iostream>
 using namespace std;
 
+#if 0
 class Animal
 {
     int age;
@@ -31,3 +32,32 @@ int main()
 {
     Dog d;
 }
+#endif
+
+#include <string>
+
+class Person
+{
+    string name;
+    int age;
+
+public:
+    Person(const string &s, int n) : name{s}, age{n} {}
+};
+
+class Student : public Person
+{
+    string school;
+    int grade;
+
+public:
+    // 자식 생성자의 인자를 통해 부모의 멤버를 초기화해주어야 합니다.
+    Student(const string &name,
+            int age,
+            const string &s,
+            int g)
+        : Person{name, age}, school{s}, grade{g}
+    // 부모의 생성자가 초기화리스트의 가장 앞에 두어야 합니다.
+    {
+    }
+};
