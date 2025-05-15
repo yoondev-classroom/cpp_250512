@@ -27,7 +27,6 @@ public:
     void Print() { cout << x << ", " << y << endl; }
 };
 
-
 int main()
 {
     Point pt1{10, 20};
@@ -41,6 +40,7 @@ int main()
 }
 #endif
 
+#if 0
 class Point
 {
 public:
@@ -61,6 +61,7 @@ int main()
 {
     foo();
 }
+#endif
 
 #if 0
 void foo(const Point &pt)
