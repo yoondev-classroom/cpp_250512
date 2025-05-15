@@ -1,0 +1,33 @@
+// 24_상속5.cpp
+#include <iostream>
+using namespace std;
+
+class Animal
+{
+    int age;
+
+public:
+    Animal(int n) : age{n} {}
+};
+
+// 초기화 리스트를 반드시 제공해야 하는 4가지 경우
+// 1) const 멤버
+// 2) reference 멤버
+// 3) 기본 생성자가 없는 멤버
+// 4) 기본 생성자가 없는 부모
+// => 기본 생성자를 제공할 수 있으면, 편리합니다.
+
+class Dog : public Animal
+{
+    // 원인
+    //  - 컴파일러가 제공하는 기본 생성자는
+    //    자식 클래스의 경우, 부모의 기본 생성자를
+    //    호출합니다.
+public:
+    Dog() : Animal{0} {}
+};
+
+int main()
+{
+    Dog d;
+}
