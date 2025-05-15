@@ -29,7 +29,7 @@ public:
     Rect(int x, int y) : leftTop{x, y} {}
 
     // Point &GetLeftTop() { return leftTop; }
-    Point GetLeftTop() { return leftTop; }
+    Point GetLeftTop() const { return leftTop; }
 
     void Print() { leftTop.Print(); }
 };
