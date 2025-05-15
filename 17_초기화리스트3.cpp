@@ -2,6 +2,11 @@
 #include <iostream>
 using namespace std;
 
+// 초기화리스트를 반드시 사용해야 하는 경우
+// 1) 멤버 데이터가 const 인 경우
+// 2) 멤버 데이터가 reference 인 경우
+// 3) 멤버 데이터가 기본 생성자를 제공하지 않는 객체인 경우
+
 #if 0
 class Point
 {
@@ -13,10 +18,7 @@ public:
         : x_{x}, y_{y} {}
 };
 
-// 초기화리스트를 반드시 사용해야 하는 경우
-// 1) 멤버 데이터가 const 인 경우
-// 2) 멤버 데이터가 reference 인 경우
-// 3) 멤버 데이터가 기본 생성자를 제공하지 않는 객체인 경우
+
 class Rect
 {
     Point leftTop;
@@ -37,7 +39,11 @@ int main()
 
 class Point
 {
+    int x;
+    int y;
+
 public:
+    Point() : x{0}, y{0} {}
     Point(int a) { cout << "Point(int)" << endl; }
 };
 

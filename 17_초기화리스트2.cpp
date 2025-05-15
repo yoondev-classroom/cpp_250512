@@ -57,7 +57,7 @@ class Point
 {
     int x = 10;
     int y = 20;
-    // 초기화되지 않았을 때의 기본값으로 사용됩니다.
+    // 생성자를 통해 초기화되지 않았을 때의 기본값으로 사용됩니다.
 
 public:
     Point(int a, int b)
@@ -78,7 +78,9 @@ int main()
 }
 #endif
 
+#if 1
 // 멤버 데이터의 이름을 구분해서 짓습니다.
+
 // - mX, mY
 // - m_x, m_y
 // - x_, y_  => 표준 권장 형식
@@ -89,10 +91,21 @@ class Point
     int x_;
     int y_;
 
+    // static int sAge;
 public:
+#if 0
+    // Point(Point* this, int x, int y)
     Point(int x, int y)
-        : x_{x}, y_{y}
+        : x{x}, y{y} /* OK */
     {
+        // x = 42;
+        this->x = 42;
+    }
+#endif
+    Point(int x, int y)
+        : x_{x}, y_{y} /* OK */
+    {
+        x_ = 42;
     }
 };
 
@@ -100,3 +113,5 @@ int main()
 {
     Point pt{100, 200};
 }
+
+#endif
