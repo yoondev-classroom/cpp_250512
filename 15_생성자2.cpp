@@ -9,6 +9,14 @@ public:
     ~Object() { cout << "~Object()" << endl; }
 };
 
+// new 연산
+// 1) 메모리 할당
+// 2) 객체라면, 생성자 호출
+
+// delete 연산
+// 1) 객체라면, 소멸자 호출
+// 2) 메모리 해지
+
 #if 0
 int main()
 {
@@ -44,6 +52,9 @@ public:
 
 int main()
 {
+    // int *p = new int; // 쓰레기값
+    int *p = new int{42};
+
     Point *p1 = new Point; // Point()
     Point *p2 = new Point{10, 20};
 

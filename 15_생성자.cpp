@@ -38,11 +38,12 @@ public:
 
 int main()
 {
-    // Point pt; // 오류!
-    Point pt{10, 20};
+    Point pt; // 오류!
+    // Point pt{10, 20};
 }
 #endif
 
+#if 1
 // 3) 생성자는 오버로딩이 가능합니다.
 //  => 객체를 생성하는 다양한 방법을 제공할 수 있습니다.
 class Point
@@ -52,6 +53,7 @@ class Point
 
 public:
     // 기본 생성자를 제공하는 것은 편리합니다.
+#if 0
     Point()
     {
         x = 0;
@@ -63,6 +65,17 @@ public:
         x = a;
         y = b;
     }
+#endif
+
+    Point()
+        : x{0}, y{0}
+    {
+    }
+
+    Point(int a, int b)
+        : x{a}, y{b}
+    {
+    }
 };
 
 int main()
@@ -70,3 +83,4 @@ int main()
     // Point pt; // 오류!
     Point pt{10, 20};
 }
+#endif

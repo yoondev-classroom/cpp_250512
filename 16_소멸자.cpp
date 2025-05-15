@@ -10,6 +10,7 @@ using namespace std;
 
 // 3. 소멸자는 1개만 제공할 수 있습니다.
 
+#if 0
 class Person
 {
     char *name;
@@ -36,4 +37,46 @@ int main()
 {
     Person person{"Tom"};
     person.Print();
+}
+#endif
+
+class Person
+{
+    char *name;
+
+public:
+    ~Person()
+    {
+
+        // 아래 처럼 작성할 필요가 없습니다.
+        // delete 연산은 nullptr에 대해서 수행될 경우,
+        // 아무일도 일어나지 않습니다.
+        // if (name)
+        // {
+        //     delete[] name;
+        // }
+
+        delete[] name;
+    }
+
+    Person()
+        : name{nullptr}
+    {
+    }
+
+    Person(const char *s)
+    {
+        name = new char[strlen(s) + 1];
+        strcpy(name, s);
+    }
+
+    void Print()
+    {
+        cout << name << endl;
+    }
+};
+
+int main()
+{
+    Person person;
 }
