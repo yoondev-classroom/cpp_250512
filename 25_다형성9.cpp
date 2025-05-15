@@ -9,6 +9,9 @@ using namespace std;
 
 // - Replace type code with polymorphism
 
+// * Design Pattern(1995, 에릭감마 외 3명)
+// => 객체 지향 설계의 일반적인 해결 방법론
+
 #if 0
 class Shape
 {
@@ -100,6 +103,9 @@ int main()
 }
 
 #endif
+
+// Prototype Pattern
+// => 객체의 복제를 다형성을 통해 구현하는 설계 방법
 
 class Shape
 {
