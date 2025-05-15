@@ -25,10 +25,10 @@ int main()
     User u2{"Bob"};
 
     // 정적 멤버 데이터에 접근하는 2가지 방법
-    // 1) 클래스 이름
+    // 1) 클래스 이름(범위 연산자)
     cout << User::className << &User::className << endl;
 
-    // 2) 객체를 통해서 접근
+    // 2) 객체를 통해서 접근(접근 연산자)
     cout << u1.className << &u1.className << endl;
     cout << u2.className << &u2.className << endl;
 }
