@@ -110,13 +110,11 @@ int main()
 class Shape
 {
 public:
-    virtual void Draw() const { cout << "Draw Shape" << endl; }
+    virtual void Draw() const = 0;
     virtual ~Shape() {}
 
-    virtual Shape *Copy() const
-    {
-        return new Shape{*this};
-    }
+    // virtual Shape *Copy() const { return new Shape{*this}; }
+    virtual Shape *Copy() const = 0;
 };
 
 class Rect : public Shape
