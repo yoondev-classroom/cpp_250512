@@ -41,14 +41,14 @@ int main()
     Animal *p = &d;
 
     Dog *pDog = static_cast<Dog *>(p);
-    cout << pDog->color << endl;
+    cout << pDog->color << endl; // 미정의 동작
 }
 #endif
 
 // 2. dynamic_cast를 이용하면, 잘못된 다운 캐스팅을 판단할 수 있습니다.
 //  - 실행 시간에 가상함수테이블을 통해 타입을 조사해서, 판단합니다.
 
-#if 0
+#if 1
 int main()
 {
     Dog d;
@@ -56,6 +56,7 @@ int main()
     Animal *p = &d;
 
     Dog *pDog = dynamic_cast<Dog *>(p);
+    // 다운 캐스팅이 실패할 경우, nullptr을 반환합니다.
     if (pDog)
     {
         cout << pDog->color << endl;

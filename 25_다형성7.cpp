@@ -23,6 +23,8 @@ public:
 int main()
 {
     Animal *p = new Dog;
+    //              Dog() 생성자 호출
+
     delete p;
 }
 
