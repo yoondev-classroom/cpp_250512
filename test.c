@@ -24,6 +24,7 @@ int main(void)
 }
 #endif
 
+#if 0
 void foo(int a, int b) {}
 void goo(void) {}
 
@@ -36,3 +37,11 @@ int main()
 0000000000000004 T _goo
 0000000000000008 T _main
 */
+#endif
+#include <stdio.h>
+int main()
+{
+    int n = 10;
+    ++n;
+    // 연산의 결과는 증가된 값
+}
