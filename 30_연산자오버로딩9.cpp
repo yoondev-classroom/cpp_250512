@@ -25,11 +25,13 @@ public:
         cout << "Point(const Point&)" << endl;
     }
 
-    void operator=(const Point &rhs)
+    Point &operator=(const Point &rhs)
     {
         cout << "operator=(const Point&)" << endl;
         x = rhs.x;
         y = rhs.y;
+
+        return *this;
     }
 };
 
@@ -38,5 +40,23 @@ int main()
     Point pt{10, 20};
 
     Point pt2{pt}; // 복사 생성자
-    pt2 = pt;      // 대입 연산자
+    pt2 = pt = pt; // 대입 연산자
+    // pt2.operator=(pt);
 }
+
+// 연산자
+// 1) 이항, 단항
+// 2) 연산자 우선 순위
+// 3) 연산 방향
+
+#if 0
+int main()
+{
+    int n1, n2, n3;
+
+    //  int a = 10 + 20;
+
+    // n1 = n2 = n3 = 10;
+    // n1.operator=(n2).operator=(n3)
+}
+#endif
