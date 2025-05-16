@@ -20,3 +20,5 @@ int main()
         cout << e << endl;
     }
 }
+
+// Effective Modern C++
