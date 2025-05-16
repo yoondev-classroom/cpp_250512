@@ -2,6 +2,10 @@
 #include <iostream>
 using namespace std;
 
+// 핵심
+// : 객체의 상태를 변경하지 않는 모든 멤버 함수는
+//   반드시 상수 멤버 함수로 만들어야 합니다.
+
 class Point
 {
     int x;
@@ -34,12 +38,26 @@ public:
 // const& / const*는 상수 멤버 함수만 호출이 가능합니다.
 void foo(const Point &pt)
 {
-    pt.Print();
+    pt.Print(); // OK
+    // pt.SetX(10); // 허용되지 않습니다.
 }
 
 void foo(const Point *pt)
 {
     pt->Print();
+    // pt->SetX(10); // 허용하지 않습니다.
+}
+
+void goo(Point &p)
+{
+    p.SetX(10); // OK
+    p.Print();  // OK
+}
+
+void goo(Point *p)
+{
+    p->SetX(10); // OK
+    p->Print();  // OK
 }
 
 #if 0
