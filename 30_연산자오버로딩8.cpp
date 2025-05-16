@@ -33,7 +33,7 @@ public:
 };
 #endif
 
-#if 0
+#if 1
 template <typename TYPE>
 class Ptr
 {
