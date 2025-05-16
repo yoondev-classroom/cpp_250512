@@ -26,6 +26,10 @@ int main()
 {
     Point pt{10, 20};
 
+    pt.Move(100, 100);
+    pt.Move(100, 100);
+    pt.Move(100, 100);
+
     // Chaining
     // => 연쇄 호출
     pt.Move(100, 100)
