@@ -68,6 +68,7 @@ int main()
 //  => Call by reference
 
 // 3. endl의 정체는 무엇인가?
+//  => 함수(IO 조정자)
 
 int main()
 {
