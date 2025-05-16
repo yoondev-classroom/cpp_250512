@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-#if 0
+#if 1
 class Animal
 {
     int age;
@@ -45,6 +45,8 @@ public:
     Person(const string &s, int n) : name{s}, age{n} {}
 };
 
+// 자식 클래스는 부모 클래스를 온전히 초기화할 수 있도록
+// 생성자를 작성해야 합니다.
 class Student : public Person
 {
     string school;

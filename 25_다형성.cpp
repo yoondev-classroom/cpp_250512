@@ -6,6 +6,11 @@ class Animal
 {
 };
 
+// * 중요: 객체 지향 설계에서 말하는 상속은
+//    C++에서의 public 상속입니다.
+//    protected 상속 / private 상속은
+//    객체 지향에서 말하는 상속과 다릅니다.
+
 class Dog : public Animal
 // class Dog
 {
@@ -13,6 +18,9 @@ class Dog : public Animal
 
 // is-a 관계
 // : <자식 클래스> is a(n) <부모 클래스>
+// => Upcasting
+//   부모 클래스의 포인터 / 참조 타입을 통해
+//   자식 객체를 참조할 수 있습니다.
 
 int main()
 {

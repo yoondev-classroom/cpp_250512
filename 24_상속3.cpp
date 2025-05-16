@@ -45,7 +45,7 @@ int main()
 class Animal
 {
     // protected:
-    // int age;
+    //     int age;
 private:
     int age;
 
@@ -61,6 +61,7 @@ public:
     void Print() const
     {
         cout << GetAge() << ", " << speed << endl;
+        // cout << age << ", " << speed << endl;
     }
 };
 
