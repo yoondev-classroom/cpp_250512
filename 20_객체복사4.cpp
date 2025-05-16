@@ -13,7 +13,10 @@ class User
     int age;
 
 public:
+    // 복사의 정책은 복사 생성자와 대입 연산자에 의해서 결정됩니다.
+    // 함께 제공되거나, 함께 제공되지 않아야 합니다.
     User(const User &rhs) = delete;
+    User &operator=(const User &rhs) = delete;
 
     User(const char *s, int n)
         : age{n}
